@@ -1,0 +1,98 @@
+// navbar
+.navbar {
+    min-height: 20vh;
+    width: 100%;
+    padding: 2rem 4rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__top { 
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__select{
+        width: 20%;
+        border-right: 1px solid rgba(0, 0, 0, 0.096);
+    }
+
+
+    &__select select{
+        height: 2rem;
+        width: 100%;
+        padding-left: .5rem;
+        border-radius: .5rem 0 0 .5rem;
+        cursor: pointer;
+    }
+
+
+    &__search {
+        min-height: 2rem;
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input{
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input input{
+        height: 2rem;
+        width: 80%;
+        padding-left: 1rem;
+        background-color: var(--secondary-color);
+    }
+
+    &__input button{
+        height: 2rem;
+        width: 10%;
+        background-color: var(--secondary-color);
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    &__authbtns button{
+        height: 2rem;
+        width: 7rem;
+        background-color: rgb(253, 253, 253);
+        border-radius: .5rem;
+    }
+
+    &__roundbtns{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__roundbtns button{
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(253, 253, 253);
+        border-radius: 50%;
+    }
+
+    &__down {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // &__down .active{
+    //     border-width: .5rem;
+    //     border-bottom: 2px solid var(--secondary-color);
+    // }
+
+    &__down p {
+        font-size: 1rem;
+        color: var(--secondary-color);
+    }
+}

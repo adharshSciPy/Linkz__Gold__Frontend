@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom'
 
 const AuthLayout = () => {
   return (
-    <section className='app_layout auth'>
+    <div className='app_layout auth'>
       <Outlet />
-    </section>
+    </div>
   )
 }
 
