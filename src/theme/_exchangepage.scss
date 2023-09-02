@@ -1,0 +1,110 @@
+.exchange {
+    height: auto;
+    padding: 2rem;
+
+    &__body {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5rem;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    &__hero {
+        color: var(--primary-dark);
+    }
+
+    &__hero p:nth-child(1),
+    :nth-child(2) {
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    &__hero p:nth-child(3),
+    :nth-child(4) {
+        line-height: 0.1;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 80%;
+        right: 100px;
+    }
+
+    &__img img {
+        position: absolute;
+        height: 100%;
+        // left: 10%;
+        bottom: 0;
+        transform: translateX(-50);
+    }
+
+    &__ratecard {
+        position: absolute;
+        top: 0;
+        height: 80%;
+        width: 60%;
+        right: 10%;
+        bottom: 0;
+        transform: translateX(-50);
+        background-color: var(--primary-light);
+        border-radius: 2.5rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__ratecard p {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    &__minicard {
+        min-height: 7rem;
+        width: 85%;
+        background-color: var(--secondary-color);
+        border-radius: 0.6rem;
+    }
+
+    &__subcard {
+        height: 40%;
+        width: 100%;
+        background-color: var(--primary-color);
+        border-radius: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    &__text-lg{
+        display: flex;
+    }
+    
+    &__text-lg p:nth-child(1), :nth-child(2){
+        color: var(--secondary-color);
+        font-size: 1rem;
+    }
+
+    &__text-sm{
+        display: flex;
+        background-color: red;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+
+    &__text-sm p:nth-child(1){
+        color: var(--secondary-color);
+        font-size: 3rem;
+    }
+
+
+}

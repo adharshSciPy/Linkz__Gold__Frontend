@@ -8,3 +8,4 @@ export { default as Customer } from './customer/Customer'
 export { default as Lease } from './lease/Lease';
 export { default as Partner } from './partner/Partner';
 export { default as About } from './about/About'
+export { default as NotFound } from './not found/NotFound'

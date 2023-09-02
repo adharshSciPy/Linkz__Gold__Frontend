@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthLayout, DefaultLayout } from '../layouts';
-import { SignIn, SignUp, HomePage, ExchangePage, Ornaments, Buycoin, Lease, Partner, About, Customer } from '../scenes';
+import { SignIn, SignUp, HomePage, ExchangePage, Ornaments, Buycoin, Lease, Partner, About, Customer, NotFound } from '../scenes';
 
 const AppRoutes = () => {
     return (
         <Routes>
+            <Route />
             <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<NotFound />} />
 
             <Route element={<AuthLayout />}>
                 <Route path='/sign-up' element={<SignUp />} />

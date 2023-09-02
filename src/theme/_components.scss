@@ -9,21 +9,25 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
+    position: fixed;
+    top: 0;
 
-    &__top { 
+    &__top {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1500px;
+        margin: auto;
     }
 
-    &__select{
+    &__select {
         width: 20%;
         border-right: 1px solid rgba(0, 0, 0, 0.096);
     }
 
 
-    &__select select{
+    &__select select {
         height: 2rem;
         width: 100%;
         padding-left: .5rem;
@@ -39,40 +43,40 @@
         align-items: center;
     }
 
-    &__input{
+    &__input {
         width: 80%;
         display: flex;
         align-items: center;
     }
 
-    &__input input{
+    &__input input {
         height: 2rem;
         width: 80%;
         padding-left: 1rem;
         background-color: var(--secondary-color);
     }
 
-    &__input button{
+    &__input button {
         height: 2rem;
         width: 10%;
         background-color: var(--secondary-color);
         border-radius: 0 .5rem .5rem 0;
     }
 
-    &__authbtns button{
+    &__authbtns button {
         height: 2rem;
         width: 7rem;
         background-color: rgb(253, 253, 253);
         border-radius: .5rem;
     }
 
-    &__roundbtns{
+    &__roundbtns {
         display: flex;
         align-items: center;
         gap: 1rem;
     }
 
-    &__roundbtns button{
+    &__roundbtns button {
         height: 2rem;
         width: 2rem;
         background-color: rgb(253, 253, 253);
@@ -84,12 +88,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1500px;
+        margin: auto;
     }
 
-    // &__down .active{
-    //     border-width: .5rem;
-    //     border-bottom: 2px solid var(--secondary-color);
-    // }
+    &__down .active {
+        border-bottom-width: .1rem;
+        border-bottom: 2px solid var(--secondary-color);
+    }
 
     &__down p {
         font-size: 1rem;
