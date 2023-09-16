@@ -1,11 +1,16 @@
 // font (google font PT Sans)
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
-// scss imports
+// basics
 @import './theme/theme';
 @import './theme/reset';
+
+// components
 @import './theme/components/navbar';
 @import './theme/components/featurebox';
 @import './theme/components/partner';
+@import './theme/components/returnpolicy';
+
+// scenes
 @import './theme/scenes/home';
 @import './theme/scenes/exchangepage'

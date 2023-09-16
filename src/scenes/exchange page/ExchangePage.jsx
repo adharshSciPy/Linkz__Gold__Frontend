@@ -1,5 +1,5 @@
 import React from 'react'
-import { FeatureBox, Partner } from '../../components'
+import { FeatureBox, Partner, ReturnPolicy } from '../../components'
 import bgEffect from '../../assets/bg-effect.svg'
 
 const ExchangePage = () => {
@@ -20,6 +20,7 @@ const ExchangePage = () => {
 
       <FeatureBox />  
       <Partner />
+      <ReturnPolicy />
     </div>
   )
 }
