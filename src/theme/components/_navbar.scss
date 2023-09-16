@@ -11,6 +11,7 @@
     gap: 1rem;
     position: fixed;
     top: 0;
+    z-index: 10;
 
     &__top {
         width: 100%;
@@ -21,11 +22,24 @@
         margin: auto;
     }
 
-    &__select {
-        width: 20%;
-        border-right: 1px solid rgba(0, 0, 0, 0.096);
+    &__logo p {
+        cursor: pointer;
+        color: var(--text-light);
+        font-weight: 600;
+        font-size: 2rem;
     }
 
+    &__search {
+        min-height: 2rem;
+        width: 70%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        width: 20%;
+        border-right: 1px solid var(--primary-color);
+    }
 
     &__select select {
         height: 2rem;
@@ -36,13 +50,6 @@
     }
 
 
-    &__search {
-        min-height: 2rem;
-        width: 80%;
-        display: flex;
-        align-items: center;
-    }
-
     &__input {
         width: 80%;
         display: flex;
@@ -51,9 +58,8 @@
 
     &__input input {
         height: 2rem;
-        width: 80%;
+        width: 100%;
         padding-left: 1rem;
-        background-color: var(--secondary-color);
     }
 
     &__input button {
@@ -66,7 +72,7 @@
     &__authbtns button {
         height: 2rem;
         width: 7rem;
-        background-color: rgb(253, 253, 253);
+        background-color: var(--bg-light);
         border-radius: .5rem;
     }
 
@@ -79,7 +85,7 @@
     &__roundbtns button {
         height: 2rem;
         width: 2rem;
-        background-color: rgb(253, 253, 253);
+        background-color: var(--bg-light);
         border-radius: 50%;
     }
 
@@ -90,15 +96,41 @@
         justify-content: space-between;
         max-width: 1500px;
         margin: auto;
+        padding-bottom: .4rem;
     }
 
     &__down .active {
-        border-bottom-width: .1rem;
-        border-bottom: 2px solid var(--secondary-color);
+        border-bottom: 1px solid var(--bg-light);
     }
 
     &__down p {
         font-size: 1rem;
         color: var(--secondary-color);
+    }
+
+    &__down p {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        text-decoration: none;
+        position: relative;
+    }
+
+    &__down p::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--bg-light);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    &__down p:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        background-color: var(--bg-light);
     }
 }

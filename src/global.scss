@@ -4,6 +4,6 @@
 // scss imports
 @import './theme/theme';
 @import './theme/reset';
-@import './theme/components';
-@import './theme/home';
-@import './theme/exchangepage'
+@import './theme/components/navbar';
+@import './theme/scenes/home';
+@import './theme/scenes/exchangepage'

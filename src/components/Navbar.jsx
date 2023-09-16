@@ -39,6 +39,11 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className="navbar__top">
+
+        <div className="navbar__logo">
+          <p>GOLD LOGO</p>
+        </div>
+
         <div className="navbar__search">
           <div className="navbar__select">
             <select name="" id="">
@@ -55,6 +60,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
         {
           !loggedIn ?
             <div className="navbar__authbtns">

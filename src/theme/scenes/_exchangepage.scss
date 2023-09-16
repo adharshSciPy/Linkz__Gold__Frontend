@@ -1,0 +1,51 @@
+.exchange{
+    height: auto;
+    min-height: 60vh;
+    padding-top: 5rem;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+
+    &__hero{
+        height: 60vh;
+        width: 70%;
+        max-height: 500px;
+        max-width: 1500px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 9;
+        border: 1px solid #F2F4F7;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__text {
+        max-width: 600px; 
+        margin: 0 auto; 
+      }
+
+    &__text p:nth-child(1),
+    :nth-child(2) {
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    &__text p:nth-child(3),
+    :nth-child(4) {
+        line-height: 0.1;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+
+    &__img {
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-50);
+    }
+}
