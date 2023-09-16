@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="navbar__input">
             <input type="text" placeholder="I'm looking for..." />
             <button>
-              <i class="fa-brands fa-searchengin"></i>
+              <i className="fa-brands fa-searchengin"></i>
             </button>
           </div>
         </div>
@@ -68,9 +68,9 @@ const Navbar = () => {
             </div>
             :
             <div className="navbar__roundbtns">
-              <button><i class="fa-regular fa-heart"></i></button>
-              <button><i class="fa-regular fa-user"></i></button>
-              <button><i class="fa-solid fa-bag-shopping"></i></button>
+              <button><i className="fa-regular fa-heart"></i></button>
+              <button><i className="fa-regular fa-user"></i></button>
+              <button><i className="fa-solid fa-bag-shopping"></i></button>
             </div>
         }
       </div>
