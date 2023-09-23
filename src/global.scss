@@ -4,6 +4,7 @@
 // basics
 @import './theme/theme';
 @import './theme/reset';
+@import './theme//breakpoint';
 
 // components
 @import './theme/components/navbar';
@@ -13,4 +14,6 @@
 
 // scenes
 @import './theme/scenes/home';
-@import './theme/scenes/exchangepage'
+@import './theme/scenes/exchangepage';
+@import './theme/scenes/buycoins';
+@import './theme/scenes/forcustomers';

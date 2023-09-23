@@ -1,6 +1,6 @@
 // navbar
 .navbar {
-    min-height: 20vh;
+    height: 20vh;
     width: 100%;
     padding: 2rem 4rem;
     background-color: var(--primary-color);
@@ -9,9 +9,14 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 10;
+
+    @include breakpoint(sm) {
+        height: 15vh;
+        padding: 0 1.3rem;
+    }
 
     &__top {
         width: 100%;
@@ -20,6 +25,17 @@
         justify-content: space-between;
         max-width: 1500px;
         margin: auto;
+
+        &--handburger {
+            color: var(--text-light);
+            font-size: 2rem;
+            cursor: pointer;
+            display: none;
+
+            @include breakpoint(md) {
+                display: block;
+            }
+        }
     }
 
     &__logo p {
@@ -34,6 +50,10 @@
         width: 70%;
         display: flex;
         align-items: center;
+
+        @include breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__select {
@@ -80,6 +100,10 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @include breakpoint(md) {
+            display: none;
+        }
     }
 
     &__roundbtns button {
@@ -97,6 +121,10 @@
         max-width: 1500px;
         margin: auto;
         padding-bottom: .4rem;
+
+        @include breakpoint(md) {
+            display: none;
+        }
     }
 
     &__down .active {
@@ -127,5 +155,66 @@
         transform: scaleX(1);
         transform-origin: bottom left;
         background-color: var(--bg-light);
+    }
+
+    // navbar mobile version
+    &__mobile {
+        display: none;
+        background-color: var(--primary-color);
+        position: fixed;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        z-index: 10;
+        color: var(--text-light);
+        transition: 0.3s ease-in-out;
+
+        .active {
+            transform: translateX(0);
+        }
+
+        @include breakpoint(md) {
+            display: block;
+        }
+
+        &__header {
+            margin: 1rem 0;
+            padding: 0 5rem;
+
+            @include breakpoint(sm){
+                padding: 0 2rem;
+            }
+
+            &--roundbtns {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                button {
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: var(--bg-light);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+
+
+        &__body {
+            margin: 2rem 0;
+            padding: 0 5rem;
+            line-height: 3rem;
+
+            @include breakpoint(sm){
+                padding: 0 2rem;
+            }
+
+            a {
+                color: var(--text-light);
+                font-size: 1.3rem;
+            }
+        }
     }
 }
