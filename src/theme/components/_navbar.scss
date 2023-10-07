@@ -2,7 +2,7 @@
 .navbar {
     height: 20vh;
     width: 100%;
-    min-height: 130px;
+    min-height: 80px;
     padding: 2rem 4rem;
     background-color: var(--primary-color);
     display: flex;
@@ -16,7 +16,7 @@
     transition: 0.5s ease-in-out;
 
     @include breakpoint(sm) {
-        height: 15vh;
+        height: 10vh;
         padding: 0 1.3rem;
     }
 
@@ -37,6 +37,10 @@
             @include breakpoint(md) {
                 display: block;
             }
+
+            @include breakpoint(sm) {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -45,6 +49,11 @@
         color: var(--text-light);
         font-weight: 600;
         font-size: 2rem;
+
+        @include breakpoint(sm) {
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
     }
 
     &__search {
@@ -129,7 +138,8 @@
         }
     }
 
-    &__down .active {
+    &__down .active p {
+        font-size: 1.2rem;
         border-bottom: 1px solid var(--bg-light);
     }
 
@@ -181,7 +191,7 @@
         }
 
         @include breakpoint(sm) {
-            width: 60%;
+            width: 80%;
         }
 
         &__header {
@@ -189,7 +199,7 @@
             padding: 0 3rem;
             min-width: 40%;
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 padding: 0 2rem;
             }
 
@@ -207,7 +217,7 @@
                     margin-right: 1rem;
                 }
 
-                @include breakpoint(md){
+                @include breakpoint(md) {
                     max-width: 40%;
                 }
             }
@@ -218,7 +228,7 @@
             padding: 0 3rem;
             line-height: 3rem;
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 padding: 0 2rem;
             }
 

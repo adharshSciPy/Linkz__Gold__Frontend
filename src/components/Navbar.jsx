@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleMobileNav = () => {
-    setIsMobileNavOpen((prevState) => !prevState);
-    document.body.style.overflow = isMobileNavOpen ? 'scroll' : 'hidden'
+    setIsNavOpen((prevState) => !prevState);
+    document.body.style.overflow = isNavOpen ? 'scroll' : 'hidden'
   };
+
+  useEffect(() => {
+    const handleEscKey = (e) => {
+      if (e.key === 'Escape') {
+        setIsNavOpen(false);
+      }
+    }
+
+    document.addEventListener('keydown', handleEscKey);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, []);
 
   const navitems = [
     {
@@ -42,7 +56,7 @@ const Navbar = () => {
     }
   ];
 
-  const mobileNavClasses = `navbar__mobile ${isMobileNavOpen ? 'active' : ''}`;
+  const mobileNavClasses = `navbar__mobile ${isNavOpen ? 'active' : ''}`;
 
   return (
     <>
@@ -79,7 +93,9 @@ const Navbar = () => {
               </div>
           }
           <div className="navbar__top--handburger" onClick={() => toggleMobileNav()}>
-            <i className="fa-solid fa-bars"></i>
+            {
+              isNavOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>
+            }
           </div>
         </div>
         <div className="navbar__down">
@@ -95,38 +111,42 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {isMobileNavOpen && (
-        <motion.div
-          className={mobileNavClasses}
-          initial={{ x: "100%" }}
-          animate={{ x: 10, y: -20 }}
-        >
-          <div className="navbar__mobile__header">
-            {
-              !loggedIn ?
-                <div className="navbar__mobile__header--authbtns">
-                  <button className='gold__btn'>Login</button>
-                </div>
-                :
-                <div className="navbar__mobile__header--roundbtns">
-                  <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-regular fa-heart"></i></button></motion.div>
-                  <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-regular fa-user"></i></button></motion.div>
-                  <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-solid fa-bag-shopping"></i></button></motion.div>
-                </div>
-            }
-          </div>
-          <div className="navbar__mobile__body">
-            {
-              navitems.map((item, val) => (
-                <motion.div whileHover={{ x: 10, scaleZ: 1.4 }}>
-                  <NavLink to={item?.to} key={val}>
-                    <p>{item.label}</p>
-                  </NavLink>
-                </motion.div>
-              ))
-            }
-          </div>
-        </motion.div>
+      {/* mobile device nav */}
+      {isNavOpen && (
+        <AnimatePresence>
+          <motion.div
+            className={mobileNavClasses}
+            initial={{ x: "100%" }}
+            animate={{ x: 10 }}
+            exit={{ x: 0, opacity: 0 }}
+          >
+            <div className="navbar__mobile__header">
+              {
+                !loggedIn ?
+                  <div className="navbar__mobile__header--authbtns">
+                    <button className='gold__btn'>Login</button>
+                  </div>
+                  :
+                  <div className="navbar__mobile__header--roundbtns">
+                    <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-regular fa-heart"></i></button></motion.div>
+                    <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-regular fa-user"></i></button></motion.div>
+                    <motion.div whileHover={{ scale: 1.2 }}><button><i className="fa-solid fa-bag-shopping"></i></button></motion.div>
+                  </div>
+              }
+            </div>
+            <div className="navbar__mobile__body">
+              {
+                navitems.map((item, val) => (
+                  <motion.div whileHover={{ x: 10, scaleZ: 1.4 }}>
+                    <NavLink to={item?.to} key={val}>
+                      <p>{item.label}</p>
+                    </NavLink>
+                  </motion.div>
+                ))
+              }
+            </div>
+          </motion.div>
+        </AnimatePresence>
       )}
     </>
   );

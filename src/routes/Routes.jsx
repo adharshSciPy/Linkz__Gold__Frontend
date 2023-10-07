@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { AuthLayout, DefaultLayout } from '../layouts';
+import { AuthLayout, DefaultLayout, OrnamentsLayout } from '../layouts';
 import { SignIn, SignUp, HomePage, ExchangePage, Ornaments, Buycoin, Lease, Partner, About, Customer, NotFound } from '../scenes';
 
 const AppRoutes = () => {
@@ -16,12 +16,15 @@ const AppRoutes = () => {
 
             <Route element={<DefaultLayout />}>
                 <Route path='/exchange' element={<ExchangePage />} />
-                <Route path='/ornaments' element={<Ornaments />} />
                 <Route path='/buy-coins' element={<Buycoin />} />
                 <Route path='/lease' element={<Lease />} />
                 <Route path='/customer' element={<Customer />} />
                 <Route path='/partner' element={<Partner />} />
                 <Route path='/about' element={<About />} />
+            </Route>
+
+            <Route path='/ornaments' element={<OrnamentsLayout />}>
+                <Route element={<Ornaments />} />
             </Route>
         </Routes>
     )
