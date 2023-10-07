@@ -50,8 +50,4 @@
         bottom: 0;
         transform: translateX(-50);
     }
-
-    @include breakpoint(sm){
-        background-color: red;
-    }
 }
