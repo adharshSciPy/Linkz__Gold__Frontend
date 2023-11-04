@@ -4,7 +4,7 @@ import { Navbar } from '../../components'
 const HomePage = () => {
   return (
     <main className='home'>
-      <Navbar />
+      <p>Home Page</p>
     </main>
   )
 }

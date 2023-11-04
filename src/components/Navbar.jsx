@@ -137,7 +137,7 @@ const Navbar = () => {
             <div className="navbar__mobile__body">
               {
                 navitems.map((item, val) => (
-                  <motion.div whileHover={{ x: 10, scaleZ: 1.4 }}>
+                  <motion.div whileHover={{ x: 10, scaleZ: 1.2 }}>
                     <NavLink to={item?.to} key={val}>
                       <p>{item.label}</p>
                     </NavLink>

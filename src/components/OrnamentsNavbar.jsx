@@ -7,31 +7,31 @@ const OrnamentsNavbar = () => {
     const routeItems = [
         {
             label: 'Best Seller',
-            to: '#'
+            to: '/ornaments/best-seller'
         },
         {
             label: 'New Arrivals',
-            to: '#'
+            to: '/ornaments/new-arrivals'
         },
         {
             label: 'Bangles & Bracletes',
-            to: '#'
+            to: '/ornaments/bangles'
         },
         {
             label: 'Special Deals',
-            to: '#'
+            to: '/ornaments/special-deals'
         },
         {
             label: 'Other Jwellery',
-            to: '#'
+            to: '/ornaments/other-jewllery'
         },
         {
             label: 'Rings & Earings',
-            to: '#'
+            to: '/ornaments/rings-earrings'
         },
         {
             label: 'Solitaries',
-            to: '#'
+            to: '/ornaments/solitaries'
         }
     ]
 
