@@ -1,5 +1,5 @@
 import React from 'react'
-import { FeatureBox } from '../../components'
+import { FeatureBox, Testimonial } from '../../components'
 import bgEffect from '../../assets/bg-effect.svg'
 
 const Buycoin = () => {
@@ -17,6 +17,7 @@ const Buycoin = () => {
         </div>
       </div>
       <FeatureBox />
+      <Testimonial />
     </div>
   )
 }

@@ -1,0 +1,17 @@
+.testimonial {
+    padding-top: 3rem;
+    // background: red;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__body--staricon {
+        background-color: #20385F;
+    }
+
+
+}

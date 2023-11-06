@@ -3,3 +3,4 @@ export { default as FeatureBox } from './FeatureBox';
 export { default as Partner } from './Partner'
 export { default as ReturnPolicy } from './ReturnPolicy'
 export { default as OrnamentsNavbar } from './OrnamentsNavbar'
+export { default as Testimonial } from './Testimonial';
