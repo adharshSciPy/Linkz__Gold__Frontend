@@ -1,0 +1,120 @@
+.ornaments {
+    height: auto;
+    width: 100%;
+    padding-top: .5rem;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto auto 5rem auto;
+
+    &__header {
+        width: 100%;
+        max-width: 1500px;
+        height: auto;
+        overflow: hidden;
+        padding: 0;
+
+        &--images {
+            display: flex;
+            gap: .5rem;
+            max-height: 80%;
+
+            img {
+                max-height: 700px;
+                object-fit: cover;
+            }
+
+            img:nth-child(1) {
+                width: 60%;
+                max-height: 400px;
+            }
+
+            img:nth-child(2) {
+                width: 40%;
+                object-position: 100% 30%;
+                max-height: 400px;
+            }
+
+        }
+    }
+
+    &__body {
+        width: 100%;
+        max-width: 1500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0 2rem;
+
+        &__filter {
+            flex: 1;
+            min-height: 80vh;
+            min-width: 20%;
+            background-color: rgba(255, 0, 0, 0.128);
+            margin-top: 2rem;
+            border-radius: 1rem;
+        }
+
+        &__products {
+            flex: 3;
+            height: 80vh;
+            min-height: 80vh;
+            margin-top: 2rem;
+            border-radius: .4rem;
+            overflow-y: scroll;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: .7rem;
+
+            &__card {
+                min-height: 12rem;
+                min-width: 15rem;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                &__details {
+                    width: 100%;
+                    position: absolute;
+                    background: linear-gradient(0deg, rgba(2,0,36,0.8577556022408963) 32%, rgba(19,10,37,0) 100%);
+                    z-index: 2;
+                    bottom: 0;
+                    color: var(--text-light);
+                    padding: .4rem 1rem;
+
+                    p:nth-child(1) {
+                        font-size: 1.2rem;
+                    }
+
+                    &--flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p:nth-child(1) {
+                            font-size: .7rem;
+                        }
+
+                        p:nth-child(2) {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
